@@ -7,6 +7,11 @@
 * [💡 Brainstorming](overview/brainstorming.md)
 * [✨ Features](overview/features.md)
 
+## System Design
+
+* [👷 Requirements Engineering](system-design/requirements-engineering.md)
+* [⚙️ Architecture](system-design/architecture.md)
+
 ## Fundamentals
 
 * [🛠️ Getting set up](fundamentals/getting-set-up.md)
