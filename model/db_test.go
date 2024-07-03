@@ -1,14 +1,14 @@
-package db_test
+package model_test
 
 import (
 	"testing"
 
-	"github.com/DaveSaah/risky/db"
+	"github.com/DaveSaah/risky/model"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestDBAlive(t *testing.T) {
-	conn, err := db.InitDB()
+	conn, err := model.InitDB()
 	if err != nil {
 		t.Fatal(err)
 	}
