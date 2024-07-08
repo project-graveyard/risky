@@ -11,6 +11,7 @@
 
 * [👷 Requirements Engineering](system-design/requirements-engineering.md)
 * [⚙️ Architecture](system-design/architecture.md)
+* [📋 Sequence Diagram](system-design/sequence-diagram.md)
 
 ## Fundamentals
 
