@@ -35,7 +35,7 @@ coverY: 0
 * Take profit ($, pips)
 * Potential profit-and-loss (PnL)
 
-#### What is to be visualised?
+#### What is to be visualized?
 
 * Days (x) and PnL (y) base plotting area.
 * Graphs of overall simulations.
