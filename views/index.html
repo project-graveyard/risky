@@ -1,19 +1,89 @@
 {{ block "index" . }}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Risky</title>
+    <script src="js/htmx.min.js"></script>
+    <script src="js/main.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Risky</title>
-  <script src="js/htmx.min.js"></script>
-  <link href="css/index.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-
-<body class="text-center">
-  Hello World!
-</body>
-
+  <body>
+    <div class="text-center text-3xl pt-3.5 pb-8">Welcome to risky</div>
+    <main class="flex items-center justify-center gap-x-10">
+      <div class="w-1/5">{{ template "form" . }}</div>
+      <div class="w-1/2">{{ template "results" . }}</div>
+    </main>
+  </body>
 </html>
+{{ end }}
+
+<!-- form  -->
+{{ block "form" . }}
+<div>
+  <form class="flex flex-col gap-y-3.5">
+    <div class="flex justify-between items-center gap-x-2">
+      <label form="capital">Capital</label>
+      <input
+        type="number"
+        name="capital ($)"
+        min="10"
+        class="bg-gray-300 rounded-lg py-1 px-3 w-48"
+      />
+    </div>
+    <div class="flex justify-between items-center gap-x-2">
+      <label form="leverage">Leverage</label>
+      <input
+        type="number"
+        name="leverage"
+        min="1"
+        max="2000"
+        class="bg-gray-300 rounded-lg py-1 px-3 w-48"
+      />
+    </div>
+    <div class="flex justify-between items-center gap-x-2">
+      <label form="risk">Risk per trade (%)</label>
+      <input
+        type="number"
+        name="risk"
+        min="1"
+        max="100"
+        class="rounded-lg bg-gray-300 py-1 px-3 w-48"
+      />
+    </div>
+    <div class="flex justify-between items-center gap-x-2">
+      <label form="trade_count">Number of trades</label>
+      <input
+        type="number"
+        name="trade_count"
+        min="1"
+        class="rounded-lg bg-gray-300 py-1 px-3 w-48"
+      />
+    </div>
+    <div class="flex justify-between items-center gap-x-2">
+      <label form="rr">Risk/reward ratio</label>
+      <input
+        type="number"
+        min="1"
+        name="rr"
+        class="rounded-lg bg-gray-300 py-1 px-3 w-48"
+      />
+    </div>
+    <div class="flex justify-between items-center gap-x-2">
+      <label for="trade_pair">Asset to trade</label>
+      <select name="trade_pair" class="rounded-lg bg-gray-300 py-1 px-3 w-48">
+        <option value="xauusd">XAU/USD</option>
+        <option value="eurusd">EUR/USD</option>
+        <option value="btcusd">BTC/USD</option>
+        <option value="ethusd">ETH/USD</option>
+      </select>
+    </div>
+    <button type="submit" class="bg-blue-500 py-2 rounded-md mt-5">
+      Simulate
+    </button>
+  </form>
+</div>
 {{ end }}
