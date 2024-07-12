@@ -1,5 +1,31 @@
 {{ block "results" . }}
 <div>
-  Results
+  <div class="text-center font-bold text-xl">Chart</div>
+  <div class="h-96"></div>
+</div>
+<div>
+  <div class="text-center font-bold text-xl">Trading Info</div>
+  <div class="flex justify-evenly gap-y-2">
+    <div>
+      <div>
+        Lot size:
+        <span class="font-semibold">0.01</span>
+      </div>
+      <div>
+        Average PnL:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        Stop loss:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+      <div>
+        Take profit:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}
