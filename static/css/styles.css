@@ -566,14 +566,6 @@ video {
   display: flex;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -584,10 +576,6 @@ video {
 
 .w-48 {
   width: 12rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .flex-col {
