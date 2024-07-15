@@ -1,5 +1,59 @@
 {{ block "results" . }}
 <div>
-  Results
+  <div class="text-center font-bold text-xl">Chart</div>
+  <div>
+    <canvas id="chart_canvas"></canvas>
+  </div>
 </div>
+<div>
+  <div class="text-center font-bold text-xl">Trading Info</div>
+  <div class="flex justify-evenly gap-y-2">
+    <div>
+      <div>
+        Lot size:
+        <span class="font-semibold">0.01</span>
+      </div>
+      <div>
+        Average PnL:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        Stop loss:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+      <div>
+        Take profit:
+        <span class="font-semibold">$ 0.00</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/chart.min.js"></script>
+<script>
+  const ctx = document.getElementById("chart_canvas");
+
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [
+        {
+          label: "# of Votes",
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+</script>
 {{ end }}
